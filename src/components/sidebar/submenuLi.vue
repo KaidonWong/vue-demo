@@ -33,8 +33,7 @@ export default {
             };
             // this.$router.push(`${this.item.url}/hello`);
             this.$router.push({
-                name: "panel2",
-                params: { propA: "hello", propB: { a: "1" } }
+                path: this.item.url
             });
         }
     }

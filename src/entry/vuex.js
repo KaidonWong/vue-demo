@@ -1,27 +1,16 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import header from "../components/header/vuex.js";
+import notice from "../components/notice/vuex.js";
+
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-	state: {
-		sidebarExpand: true
-	},
-	getters: {
-		getSidebarExpand: state => {
-			return state.sidebarExpand;
-		}
-	},
-	mutations: {
-		toggleSidebar(state) {
-			state.sidebarExpand = !state.sidebarExpand;
-		}
-	},
-	actions: {
-		toggleSidebar(context) {
-			context.commit("toggleSidebar");
-		}
-	}
+    modules: {
+        header,
+        notice
+    }
 });
 
 export default store;

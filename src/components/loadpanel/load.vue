@@ -48,6 +48,7 @@
         </ul>
 
         <chart-vue></chart-vue>
+        <div style="height:40px"></div>
     </div>
 </template>
 <script>

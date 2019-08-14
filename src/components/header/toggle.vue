@@ -20,7 +20,7 @@ export default {
     methods: {
         onClick: function() {
             this.hasActive.active = !this.hasActive.active;
-            this.$store.dispatch("toggleSidebar");
+            this.$store.dispatch("header/toggleSidebar");
         }
     }
 };

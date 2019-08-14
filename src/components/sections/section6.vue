@@ -1,28 +1,16 @@
 <template>
-    <div class="root-wrap">
-        <header-vue></header-vue>
-        <div class="belowHeader">
-            <sidebar-right-vue></sidebar-right-vue>
-            <panel-vue></panel-vue>
-            <sidebar-vue :menus="menus"></sidebar-vue>
+    <div style="background-color:#fff;padding:2em;">
+        <div class="a">
+            <menu-vue :menus="menus"></menu-vue>
         </div>
-        <notice-vue></notice-vue>
     </div>
 </template>
 <script>
-import Sidebar from "../sidebar";
-import Header from "../header";
-import SidebarRight from "../sidebarRight";
-import Panel from "../panel/panel.vue";
-import Notice from "../notice";
+import Menu from "../sidebar/menus.vue";
 
 export default {
     components: {
-        "header-vue": Header,
-        "sidebar-vue": Sidebar,
-        "sidebar-right-vue": SidebarRight,
-        "panel-vue": Panel,
-        "notice-vue": Notice
+        "menu-vue": Menu,
     },
     data: function() {
         return {
@@ -30,7 +18,7 @@ export default {
                 {
                     name: "Dashboard",
                     icon: "icon-icon-",
-                    url: "/panel1"
+                    url: ""
                 },
                 {
                     name: "Apps",
@@ -39,22 +27,22 @@ export default {
                     submenu: [
                         {
                             name: "Mailbox",
-                            url: "/panel2"
+                            url: ""
                         },
                         {
                             name: "Search",
-                            url: "/panel3"
+                            url: ""
                         },
                         {
                             name: "Todo",
-                            url: "/panel4"
+                            url: ""
                         }
                     ]
                 },
                 {
                     name: "Components",
                     icon: "icon-component24",
-                    url: "/panel5"
+                    url: ""
                 },
                 {
                     name: "Plugins",
@@ -63,7 +51,7 @@ export default {
                     submenu: [
                         {
                             name: "Mailbox",
-                            url: "/panel6"
+                            url: ""
                         },
                         {
                             name: "Mailbox",
@@ -106,13 +94,8 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
-.root-wrap {
-    height: 100%;
-    background-color: #f4f4f4;
-    .belowHeader {
-        height: calc(100% - 60px);
-    }
+<style scoped>
+.a {
+    width: 220px;
 }
 </style>
-

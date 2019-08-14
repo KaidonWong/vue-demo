@@ -78,6 +78,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .right-wrap {
+    overflow: hidden;
     float: right;
     width: 240px;
     height: 100%;

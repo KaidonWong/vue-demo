@@ -20,7 +20,8 @@ export default {
     },
     computed: {
         styleWidth: function() {
-            let status = this.$store.getters.getSidebarExpand;
+            let status = this.$store.getters['header/getSidebarExpand'];
+            
             if(status == true) {
                 return {"display": "block"}
             }else {
@@ -28,7 +29,6 @@ export default {
             }
         }
     }
-
 };
 </script>
 <style lang="scss" scoped>

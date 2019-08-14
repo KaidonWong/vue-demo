@@ -16,7 +16,7 @@ export default {
     data: function() {
         return {
             clickPosition: {
-                left: '0px',
+                left: "0px",
                 top: "0px"
             }
         };
@@ -30,9 +30,16 @@ export default {
     methods: {
         onClick: function(e) {
             this.clickPosition = {
-                left: `${e.offsetX-10}px`,
-                top: `${e.offsetY-10}px`
-            }
+                left: `${e.offsetX - 10}px`,
+                top: `${e.offsetY - 10}px`
+            };
+            let obj = {
+                type: 0,
+                title: "Notice",
+                content:
+                    "this is a notice just for demonstration! haha ,now you see me?"
+            };
+            this.$store.dispatch("notice/addNotice",obj);
         }
     }
 };

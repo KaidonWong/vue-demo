@@ -6,6 +6,7 @@ import VueRoot from "../components/root/root2.vue";
 import "../assets/css/global.css";
 import "../assets/iconfont/iconfont.css";
 
+
 window.onload = function() {
     let element = document.createElement("div");
     element.style.height = "100%";
@@ -19,5 +20,6 @@ window.onload = function() {
         components: {
             "root-vue": VueRoot
         }
-	});
+    });
+    
 };
